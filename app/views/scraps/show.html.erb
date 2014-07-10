@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @scrap.url %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @scrap.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @scrap.desc %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @scrap.image %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @scrap.price %>
+</p>
+
+<%= link_to 'Edit', edit_scrap_path(@scrap) %> |
+<%= link_to 'Back', scraps_path %>

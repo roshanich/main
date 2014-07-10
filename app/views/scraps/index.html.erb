@@ -1,0 +1,33 @@
+<h1>Listing scraps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Title</th>
+      <th>Desc</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scraps.each do |scrap| %>
+      <tr>
+        <td><%= scrap.url %></td>
+        <td><%= scrap.title %></td>
+        <td><%= scrap.desc %></td>
+        <td><%= scrap.image %></td>
+        <td><%= scrap.price %></td>
+        <td><%= link_to 'Show', scrap %></td>
+        <td><%= link_to 'Edit', edit_scrap_path(scrap) %></td>
+        <td><%= link_to 'Destroy', scrap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scrap', new_scrap_path %>
